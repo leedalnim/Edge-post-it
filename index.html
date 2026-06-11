@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>엣지 포스트잇 (Edge Post-it) — 다운로드</title>
+<meta name="description" content="화면 끝에 숨어 있다가 마우스를 올리면 펼쳐지는 포스트잇 메모장. 마크다운 지원. macOS / Windows 다운로드." />
+<style>
+:root{--bg:#fff7e6;--card:#fff;--ink:#3a3226;--muted:#8a7f6d;--line:#efe3c8;--mac:#4a90e2;--win:#2f9e6e;--accent:#f4b740}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;color:var(--ink);background:radial-gradient(1200px 600px at 50% -200px,#fff 0%,var(--bg) 60%),var(--bg);line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding:48px 20px 80px}
+header{text-align:center;margin-bottom:36px}
+.logo{font-size:72px;line-height:1}
+h1{font-size:2rem;margin:10px 0 6px;letter-spacing:-.5px}
+.tagline{color:var(--muted);margin:0;font-size:1.05rem}
+.downloads{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:36px 0}
+@media(max-width:560px){.downloads{grid-template-columns:1fr}}
+.dl{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 20px;text-align:center;box-shadow:0 4px 14px rgba(120,95,40,.06);transition:transform .12s,box-shadow .12s}
+.dl:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(120,95,40,.14)}
+.dl .os{font-size:1.25rem;font-weight:700;margin-bottom:4px}
+.dl .meta{color:var(--muted);font-size:.9rem;margin-bottom:16px}
+.dl .emoji{font-size:2.2rem;display:block;margin-bottom:8px}
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;color:#fff;font-weight:700;font-size:.98rem}
+.dl.mac .btn{background:var(--mac)}
+.dl.win .btn{background:var(--win)}
+section.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 26px;margin:22px 0;box-shadow:0 4px 14px rgba(120,95,40,.05)}
+section.card h2{margin-top:0;font-size:1.2rem}
+ul{padding-left:1.2em}li{margin:6px 0}
+code{background:#f5ecd8;border-radius:6px;padding:1px 6px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em}
+.note{color:var(--muted);font-size:.9rem}
+footer{text-align:center;color:var(--muted);font-size:.85rem;margin-top:40px}
+a.inline{color:var(--accent);font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="logo">🐱📝</div>
+<h1>엣지 포스트잇</h1>
+<p class="tagline">화면 끝에 숨어 있다가 마우스를 올리면 펼쳐지는 포스트잇 메모장 · 마크다운 지원</p>
+</header>
+
+<div class="downloads">
+<a class="dl mac" href="EdgePostit-mac.zip" download>
+<span class="emoji">🍎</span>
+<div class="os">macOS</div>
+<div class="meta">소스 버전 · Node.js 필요</div>
+<span class="btn">다운로드</span>
+</a>
+<a class="dl win" href="https://github.com/leedalnim/edge-post-it/releases/latest/download/EdgePostit-Windows.zip">
+<span class="emoji">🪟</span>
+<div class="os">Windows</div>
+<div class="meta">실행 파일 버전</div>
+<span class="btn">다운로드</span>
+</a>
+</div>
+<p class="note" style="text-align:center">Windows 버튼은 <a class="inline" href="https://github.com/leedalnim/edge-post-it/releases/latest">최신 릴리스</a>의 파일을 받습니다.</p>
+
+<section class="card">
+<h2>✨ 주요 기능</h2>
+<ul>
+<li><b>펼치기 / 접기</b> — 화면 끝 색 탭에 마우스를 올리면 펼쳐지고, 빼면 접힙니다.</li>
+<li><b>작성 / 편집</b> — 펼친 메모 본문을 클릭해 마크다운으로 쓰고, 다른 곳을 클릭하면 렌더된 보기로 바뀝니다.</li>
+<li><b>위치 이동</b> — 상단 손잡이(⋮⋮)를 드래그하면 가까운 화면 끝에 자동으로 붙습니다.</li>
+<li><b>크기 조절</b> — 메모 모서리(대각선)를 드래그.</li>
+<li><b>새 메모 / 색 / 삭제</b> — 헤더의 <code>+</code> · 팔레트 · 휴지통.</li>
+<li><b>항상 위 · 투명 · 끝 도킹</b> — 작업을 방해하지 않게 화면 가장자리에 머뭅니다.</li>
+</ul>
+<p class="note">마크다운: <code># 제목</code> <code>**굵게**</code> <code>- 목록</code> <code>- [ ] 할 일</code> <code>&gt; 인용</code> <code>`코드`</code> <code>[링크](url)</code></p>
+</section>
+
+<section class="card">
+<h2>🍎 macOS 설치 방법</h2>
+<p>맥용은 "소스" 버전이라 <a class="inline" href="https://nodejs.org" target="_blank" rel="noopener">Node.js (LTS)</a>가 필요합니다.</p>
+<ul>
+<li>zip을 풀고 <code>EdgePostit</code> 폴더 안의 <code>start-mac.command</code> 를 더블클릭하세요.</li>
+<li>처음 한 번은 자동으로 구성요소를 설치합니다(몇 분). 이후엔 더블클릭하면 바로 실행됩니다.</li>
+<li>"확인되지 않은 개발자" 경고가 나오면 파일 우클릭 → <b>열기</b> 로 한 번 허용하세요.</li>
+</ul>
+<p class="note">메모 저장 위치: <code>~/Library/Application Support/edge-postit/notes.json</code></p>
+</section>
+
+<section class="card">
+<h2>🪟 Windows 설치 방법</h2>
+<ul>
+<li>zip을 받아 압축을 풀고 안의 실행 파일을 더블클릭하세요.</li>
+<li>"Windows의 PC 보호" 경고가 나오면 <b>추가 정보 → 실행</b> 을 눌러주세요.</li>
+</ul>
+</section>
+
+<footer><p>엣지 포스트잇 (Edge Post-it) · 마크다운 포스트잇 메모장</p></footer>
+</div>
+</body>
+</html>
